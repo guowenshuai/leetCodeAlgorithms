@@ -26,18 +26,3 @@ func findRepeatedDnaSequences(s string) []string {
 	}
 	return ret
 }
-
-func findRepeatedDnaSequencesBK(s string) []string {
-	sTmp := []byte(s)
-	regMap := make(map[string]int)
-	ret := []string{}
-	for i:=0; i<len(s)-10;i++ {
-		if _, ok := regMap[string(sTmp[i : i+10])]; !ok {
-			if strings.Contains(string(sTmp[i+1:len(s)]), string(sTmp[i:i+10])) {
-				regMap[string(sTmp[i : i+10])] = 0
-				ret = append(ret, string(sTmp[i : i+10]))
-				}
-				}
-				}
-	return ret
-}
