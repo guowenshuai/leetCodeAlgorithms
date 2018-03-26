@@ -45,8 +45,15 @@ func (root *TreeNode)Print() {
 func mergeTrees(t1 *TreeNode, t2 *TreeNode) *TreeNode {
 	rTree := &TreeNode{0, nil, nil}
 
-	readTree(t1, rTree)
-	readTree(t2, rTree)
+	if t1 == nil && t2 == nil {
+		return nil
+	}
+	if t1 != nil {
+		readTree(t1, rTree)
+	}
+	if t2 != nil {
+		readTree(t2, rTree)
+	}
 	return rTree
 }
 

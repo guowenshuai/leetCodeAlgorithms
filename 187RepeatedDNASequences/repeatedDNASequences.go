@@ -1,8 +1,6 @@
 package _87RepeatedDNASequences
 
-import (
-	"strings"
-)
+
 
 
 func findRepeatedDnaSequences(s string) []string {
