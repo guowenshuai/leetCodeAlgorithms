@@ -5,7 +5,7 @@ import "fmt"
 func findComplement(num int) int {
 	fmt.Printf("%b\n", num)
 
-	r := num ^ 0xffffffff
+	r := num ^ 0xfffffff
 	fmt.Printf("%b\n", r)
 	tool := 0
 	for num>0 {
